@@ -59,7 +59,7 @@
 
 .. code-block:: java
 
-   public class Main{
+   class Main{
        public static void main(String args[]) {
            PointD y = new ManhattanPt(2, 8);
            System.out.println(y.distanceTo0());
@@ -99,13 +99,5 @@
 4. 最后，编译文件并且执行 `Main` 类。
 
    .. tip::
-
-      按照上面的要求，保存的代码的文件名同时也要为 `Main.java` 。\
-      (因为Java会根据文件名来查找其文件内同名的类，再执行该类的main方法)
-
-      然后使用 `javac Main.java` 来进行编译生成 `Main.class` 中间码文件。
-
-      最后， `java Main` 来执行程序。
-
-      建议大家上网搜索一下 `Java helloworld` 看一下相关教程就可以了。\
-      暂时不用深入学习 `Java` 。
+      `Main`类不能声明为public，因为声明为public的是你自己的类，`Main`是在你自己的类中新增的类。运行时要指定运行的是`Main`，
+      否则会执行你自己的类的main方法。
